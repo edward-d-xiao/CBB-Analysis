@@ -4,6 +4,7 @@ cbb17 <- read.csv("cbb17.csv")
 cbb18 <- read.csv("cbb18.csv")
 cbb19 <- read.csv("cbb19.csv")
 cbb20 <- read.csv("cbb20.csv")
+cbb21 <- read.csv("cbb21.csv")
 
 library(ggplot2)
 library(datasets)
@@ -38,6 +39,8 @@ shinyServer(
         {
           return(cbb20)
         }
+        else if(input$year=="2021")
+          return(cbb21)
         
       }
     )
@@ -210,7 +213,7 @@ shinyServer(
         par(mar = c(0,0,0,0), bg = "#00000000")
         plot(c(0, 1), c(0, 1), ann = F, bty = 'n', type = 'n', xaxt = 'n', yaxt = 'n')
         text(x = .5, y = 1.0, paste("Please Select Both a Metric and a Year"), 
-             cex = 1.6, col = "black")
+             cex = 1.6, col = "red")
       }
       else{
       ggplot(cbbdata(), aes_string(x=input$metric, y="W")) + 

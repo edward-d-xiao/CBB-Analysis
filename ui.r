@@ -6,12 +6,12 @@ library(shinyWidgets)
 shinyUI( fluidPage(
   
   setBackgroundImage(
-    src = "https://media.gettyimages.com/videos/basketball-animation-on-gray-gradient-background-video-id1277086236?s=640x640"
+    src = "https://ncaaorg.sidearmsports.com/images/2021/9/29/March_Madness.jpg"
   ),
   
   pageWithSidebar(
     
-    titlePanel("Which College Basketball Metric Correlates the Most with Wins? (2015-2020)"),
+    titlePanel("Which College Basketball Metric Correlates the Most with Wins? (2015-2021)"),
     
     sidebarPanel(
       
@@ -45,7 +45,8 @@ shinyUI( fluidPage(
                     "2017" = "2017",
                     "2018" = "2018",
                     "2019" = "2019",
-                    "2020" = "2020"
+                    "2020" = "2020",
+                    "2021" = "2021"
                     
                   ))
       
